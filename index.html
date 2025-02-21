@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гра на Canvas</title>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <canvas id="gameCanvas" width="400" height="400"></canvas>
-    <p>Очки: <span id="score">0</span></p>
-    <button id="startGame">Почати гру</button>
-    <button id="endGame">Завершити гру</button>
-    <br>
-    <button id="moveUp">Вгору</button>
-    <button id="moveDown">Вниз</button>
-
-
-   <button id="displayScores">Показати результати</button>
-   <button id="clearScores">Очистити результати</button>
+    <p>Бали: <span id="score">0</span></p>
+    <div id="previousScoreDisplay"></div>
+    <div class="button-container">
+        <button id="startGame">Почати гру</button>
+        <button id="endGame">Завершити гру</button>
+    </div>
+    <div class="button-container-move">
+        <div>
+            <button id="moveUp">↑</button>
+        </div>
+        <div>
+            <button id="moveLeft">←</button>
+            <button id="moveRight">→</button>
+        </div>
+        <div>
+            <button id="moveDown">↓</button>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
