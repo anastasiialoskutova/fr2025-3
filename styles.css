@@ -1,4 +1,3 @@
-/* styles.css */
 
 #gameCanvas {
     border: 2px solid black;
@@ -12,16 +11,16 @@ button {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    border: 2px solid #ff69b4;  /* Рожевий колір для обводки */
-    background-color: #ffb6c1; /* Світло-рожевий фон */
-    color: #fff; /* Білий текст */
-    border-radius: 10px; /* Заокруглені кути */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавні ефекти */
+    border: 2px solid #ff69b4;  
+    background-color: #ffb6c1; 
+    color: #fff; 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 button:hover {
-    background-color: #ff69b4; /* Темніший рожевий при наведенні */
-    transform: scale(1.1); /* Збільшення кнопки при наведенні */
+    background-color: #ff69b4; 
+    transform: scale(1.1); 
 }
 
 #score {
@@ -41,7 +40,6 @@ button:hover {
     text-align: center;
 }
 
-/* Для кнопок руху */
 .button-container-move {
     display: flex;
     flex-direction: column;

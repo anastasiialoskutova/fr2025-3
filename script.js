@@ -86,7 +86,6 @@ function saveScore() {
 
     let scores = JSON.parse(localStorage.getItem('scores')) || [];
 
-    // Оновлення передостаннього рахунку
     if (scores.length > 0) {
         localStorage.setItem('previousScore', JSON.stringify(scores[scores.length - 1]));
     }
@@ -94,11 +93,9 @@ function saveScore() {
     let date = new Date().toLocaleDateString();
     const newScore = { name: playerName, score: score, date: date };
 
-    // Збереження нового рахунку в LocalStorage
     scores.push(newScore);
     localStorage.setItem('scores', JSON.stringify(scores));
 
-    // Оновлення JSON-файлу на сервері
     fetch('/saveScore', {
         method: 'POST',
         headers: {
@@ -114,11 +111,9 @@ function saveScore() {
         console.error('Помилка збереження:', error);
     });
 
-    // Відображення передостаннього рахунку
     displayPreviousScore();
 }
 
-// Функція для відображення передостаннього рахунку (Одна версія!)
 function displayPreviousScore() {
     let previousScore = JSON.parse(localStorage.getItem('previousScore'));
     if (previousScore) {
@@ -174,5 +169,4 @@ reloadPageButton.addEventListener('click', () => location.reload());
 
 document.getElementById('displayScores').addEventListener('click', displayScores);
 
-// Викликаємо `displayPreviousScore` лише ОДИН раз при завантаженні сторінки
 window.onload = displayPreviousScore;
